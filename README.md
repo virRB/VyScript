@@ -34,5 +34,12 @@
 - There are examples given under VyrExamples
 
 ## Dependencies
-- [Python(python.org)]
+- [Python](python.org)
+
+## Module specific dependencies
+- pyautogui:
+- ```bash
+  pip install pyautogui
+  ```
+
   
