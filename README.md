@@ -32,4 +32,7 @@
 
 ## How to learn
 - There are examples given under VyrExamples
+
+## Dependencies
+- [Python][python.org]
   
