@@ -34,5 +34,5 @@
 - There are examples given under VyrExamples
 
 ## Dependencies
-- [Python][python.org]
+- Python[python.org]
   
