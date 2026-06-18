@@ -8,7 +8,7 @@ in_if = False
 in_func = False
 nest = 0
 modules = []
-headers = ["def", "if", "class", "for"]
+headers = ["def", "if", "class", "for", "while"]
 vars = []
 funcs = []
 
@@ -17,11 +17,11 @@ test = os.path.join(BASE_DIR, "TEST.vyr")
 
 
 def write_into(what):
-    open(runtime, "a").write(what + "\n")
+    open(runtime, "a", encoding="utf-8").write(what + "\n")
 
 
 def clear():
-    open(runtime, "w").write("")
+    open(runtime, "w", encoding="utf-8").write("")
 
 
 clear()
@@ -60,7 +60,12 @@ def parse(line, ver):
 
     for var in vars:
         if line.startswith(var):
-            output = line
+            new = line.split(" = ")
+            rhs = new[1]
+            rhs = parse(rhs, "recurse")
+            call = True
+            lhs = new[0]
+            output = f"{lhs} = {rhs}"
 
     if line.startswith("return"):
         output = line
@@ -81,6 +86,13 @@ def parse(line, ver):
         output = f"import modules.{fin} as {fin}"
         if fin not in modules:
             modules.append(fin)
+
+    elif line.startswith("aslongas"):
+        line = line.replace("aslongas ", "")
+        line = line.replace(" -> {", "")
+        condition = line
+        output = f"while {condition}:"
+        nest += 1
 
     elif line.startswith("alias"):
         if ".pull" in line:
@@ -111,7 +123,7 @@ def parse(line, ver):
 
     elif line.startswith("var"):
         line = line.replace("var ", "")
-        splt = line.split(" = ")
+        splt = line.split(" = ", 1)
         new = splt[1]
         new = parse(new, "recurse")
         call = True
