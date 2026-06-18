@@ -18,6 +18,14 @@ explorer .
 ```bash
 vy start
 ```
+- If you are a vscode user, also put vyscript-syntaxes in this folder, then open terminal and run
+```bash
+cd vyscript-syntaxes
+```
+- Then run
+```bash
+code --install-extension vyscript-support-0.0.1.vsix
+```
 
 ## Creating a new project
 - In terminal, run
