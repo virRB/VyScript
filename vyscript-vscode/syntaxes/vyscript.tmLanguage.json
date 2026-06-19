@@ -4,6 +4,7 @@
   "fileTypes": ["vy", "vyr"],
 
   "patterns": [
+
     {
       "name": "comment.line.vyscript",
       "match": "@.*$"
@@ -21,8 +22,13 @@
     },
 
     {
-      "name": "keyword.operator.arrow.vyscript",
+      "name": "keyword.control.flow.arrow.vyscript",
       "match": "->"
+    },
+
+    {
+      "name": "keyword.operator.vyscript",
+      "match": "(\\+|=|!|not)"
     },
 
     {
@@ -32,12 +38,23 @@
 
     {
       "name": "keyword.control.vyscript",
-      "match": "\\b(func|if|for|return|aslongas|range)\\b"
+      "match": "\\b(func|if|for|return|aslongas|otherwise|othif)\\b"
     },
 
     {
-      "name": "support.function.vyscript",
-      "match": "\\b(addInScript|alias)\\b"
+      "name": "support.function.module.vyscript",
+      "match": "\\b(addInScript|alias|attempt|onfail|use|pull)\\b"
+    },
+
+    {
+      "name": "keyword.control.exception.vyscript",
+      "match": "\\b(skip|end)\\b"
+    },
+
+    {
+      "name": "support.function.builtin.vyscript",
+      "match": "\\b(prnt|input|len|int|str)\\b"
     }
+
   ]
 }
