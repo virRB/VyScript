@@ -33,17 +33,17 @@
 
     {
       "name": "keyword.declaration.var.vyscript",
-      "match": "\\bvar\\b"
+      "match": "\\b(var|dat)\\b"
     },
 
     {
       "name": "keyword.control.vyscript",
-      "match": "\\b(func|if|for|return|aslongas|otherwise|othif)\\b"
+      "match": "\\b(func|if|for|return|aslongas|otherwise|othif|public)\\b"
     },
 
     {
       "name": "support.function.module.vyscript",
-      "match": "\\b(addInScript|alias|attempt|onfail|use|pull)\\b"
+      "match": "\\b(addInScript|alias|attempt|onfail|use|pull|edit|data)\\b"
     },
 
     {
