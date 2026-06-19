@@ -292,7 +292,12 @@ dat player -> {
 var name = data player.Name
 prnt(name)
 ```
-- As for now, structs are read only, but I can try to make them mutable in future updates.
+- data from a struct can only be read as the value of a variable, as it is not a generic  expression
+- But the variable with the data can be used anywhere
+- To change data from a struct, it is as simple as:
+```VyScript
+edit player.Name = "Still VirRB"
+```
 ## Error handling
 - unlike pythons "try/except", VyScript has "attempt/onfail"
 - Example:
