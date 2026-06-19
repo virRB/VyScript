@@ -22,17 +22,15 @@ def run_project():
     parser_path = os.path.join(cwd, "parser.py")
     runtime_path = os.path.join(cwd, "runitme.py")
 
-    print("ARGS:", sys.argv[1:])
-
     if os.path.exists(parser_path):
-        print("🐡The Fish is conjuring your script...")
+        print("🐡Henry is conjuring your script...")
         subprocess.run([sys.executable, parser_path], cwd=cwd)
     else:
         print("parser.py not found in", cwd)
         return
 
     if os.path.exists(runtime_path):
-        print("🐟Starting Project...")
+        print("🐡Starting Project...")
         subprocess.run([sys.executable, runtime_path], cwd=cwd)
     else:
         print("runitme.py not found in", cwd)
