@@ -28,7 +28,7 @@
 
     {
       "name": "keyword.operator.vyscript",
-      "match": "(\\+|=|!|not)"
+      "match": "(\\|=|!|not)"
     },
 
     {
@@ -43,7 +43,7 @@
 
     {
       "name": "support.function.module.vyscript",
-      "match": "\\b(addInScript|alias|attempt|onfail|use|pull|edit|data)\\b"
+      "match": "\\b(addInScript|alias|attempt|onfail|use|pull|edit|data|True|False)\\b"
     },
 
     {
