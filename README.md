@@ -8,7 +8,7 @@
 - [Python](https://python.org)
 
 ## Initail Setup
-- Run `installer.py` that is provided in 
+- Run `installer.py` that is provided in `vyinstaller`
 
 ```bash
 vy start
