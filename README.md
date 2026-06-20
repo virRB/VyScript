@@ -173,6 +173,13 @@ if a {
     prnt("What?")
 }
 ```
+- To use things like struct data, functions or module calls in your if statements, you can use our custom bracket /+
+- For example:
+```VyScript
+if /rand.use -> pick(1, 3)+ ==  3 {
+    prnt("Lucky winner!")
+}
+```
 ## Loops
 - Loops are basically one piece of code repeated multiple times.
 - "For" loops (Loops that loop through every item in an array):
