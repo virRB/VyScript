@@ -180,6 +180,7 @@ if /rand.use -> pick(1, 3)+ ==  3 {
     prnt("Lucky winner!")
 }
 ```
+- Same with othif
 ## Loops
 - Loops are basically one piece of code repeated multiple times.
 - "For" loops (Loops that loop through every item in an array):
