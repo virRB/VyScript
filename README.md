@@ -13,14 +13,12 @@
 ```bash
 vy start
 ```
-- If you are a vscode user, also put vyscript-syntaxes in this folder, then open terminal and run
-```bash
-cd vyscript-syntaxes
-```
-- Then run
-```bash
-code --install-extension vyscript-support-0.0.1.vsix
-```
+
+- If you are a vscode user, you can download the "vyscript" extension from the extenstion store
+- This provides a run button and syntax highlighting
+- The icon should be a pufferfish
+
+**Website:** [VyScript](https://vyscript.netlify.app/)
 
 ## Creating a new project
 - In terminal, run
